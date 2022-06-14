@@ -72,14 +72,10 @@ fn ex3() {
 // Excercise 4
 fn ex4(){
     let mut a = vec![1,2,3,4,5];
-    let mut i = 0;
     let mut c = 0;
-    loop {
-        (a, c) = test(a);
-        println!("{}",c);
-        i+=1;
-        if i >=5 {break;}
-    }
+    (a, c) = test(a);
+    println!("c: {}", c);
+    println!("reversed a: {:?}", a);
 }
 
 pub fn test(mut a: Vec<u8>) -> (Vec<u8>, i32) {
@@ -94,8 +90,12 @@ pub fn test(mut a: Vec<u8>) -> (Vec<u8>, i32) {
     (b, c as i32)
 }
 fn main(){
+    println!("- Excercise 1");
     ex1();
+    println!("- Excercise 2");
     ex2();
+    println!("- Excercise 3");
     ex3();
+    println!("- Excercise 4");
     ex4();
 }
